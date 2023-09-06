@@ -17,5 +17,6 @@ public class PostConstructExampleBean {
         ApacheCommonsLangExamples apacheCommonsLangExamples = new ApacheCommonsLangExamples();
         logger.info(apacheCommonsLangExamples.testPersonToString());
         logger.info(apacheCommonsLangExamples.testPetToString());
+        logger.info(apacheCommonsLangExamples.testStringUtils());
     }
 }

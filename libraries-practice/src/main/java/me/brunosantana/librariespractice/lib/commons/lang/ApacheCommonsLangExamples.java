@@ -1,5 +1,6 @@
 package me.brunosantana.librariespractice.lib.commons.lang;
 
+import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
@@ -26,6 +27,10 @@ public class ApacheCommonsLangExamples {
                 .concat(ToStringBuilder.reflectionToString(myDog, ToStringStyle.NO_CLASS_NAME_STYLE))
                 .concat("\n\nNO_FIELD_NAMES_STYLE\n")
                 .concat(ToStringBuilder.reflectionToString(myDog, ToStringStyle.NO_FIELD_NAMES_STYLE));
+    }
+
+    public String testStringUtils(){
+        return StringUtils.leftPad("1", 4, "0");
     }
 
 }
