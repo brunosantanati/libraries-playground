@@ -30,7 +30,27 @@ public class ApacheCommonsLangExamples {
     }
 
     public String testStringUtils(){
-        return StringUtils.leftPad("1", 4, "0");
+        return StringUtils.leftPad("1", 4, "0")
+                .concat("\n")
+                .concat(StringUtils.substring("Java 17 LTS", 0, 7))
+                .concat("\n")
+                .concat(StringUtils.substring("abc", -2, -1))
+                .concat("\n")
+                .concat(StringUtils.substring("abc", -4, 2))
+                .concat("\n")
+                .concat(StringUtils.substringAfter("Oracle Java 21", "Oracle "))
+                .concat("\n")
+                .concat(Boolean.toString(StringUtils.isAllBlank("   ")))
+                .concat("\n")
+                .concat(Boolean.toString(StringUtils.isAllBlank("")))
+                .concat("\n")
+                .concat(Boolean.toString(StringUtils.isAllBlank(null)))
+                .concat("\n")
+                .concat(Boolean.toString(StringUtils.isEmpty("   ")))
+                .concat("\n")
+                .concat(Boolean.toString(StringUtils.isEmpty("")))
+                .concat("\n")
+                .concat(Boolean.toString(StringUtils.isEmpty(null)));
     }
 
 }
