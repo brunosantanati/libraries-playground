@@ -1,6 +1,7 @@
 package me.brunosantana.librariespractice;
 
 import jakarta.annotation.PostConstruct;
+import me.brunosantana.librariespractice.lib.commons.beanutils.ApacheCommonsBeanUtilsExamples;
 import me.brunosantana.librariespractice.lib.commons.lang.ApacheCommonsLangExamples;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,5 +19,8 @@ public class PostConstructExampleBean {
         logger.info(apacheCommonsLangExamples.testPersonToString());
         logger.info(apacheCommonsLangExamples.testPetToString());
         logger.info(apacheCommonsLangExamples.testStringUtils());
+
+        ApacheCommonsBeanUtilsExamples apacheCommonsBeanUtilsExamples = new ApacheCommonsBeanUtilsExamples();
+        logger.info(apacheCommonsBeanUtilsExamples.testCopyProperties());
     }
 }

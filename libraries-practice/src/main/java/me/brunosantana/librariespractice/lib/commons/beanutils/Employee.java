@@ -1,16 +1,17 @@
-package me.brunosantana.librariespractice.lib.commons.lang;
+package me.brunosantana.librariespractice.lib.commons.beanutils;
 
 import org.apache.commons.lang3.builder.RecursiveToStringStyle;
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 
-public class Person {
+public class Employee {
 
     private String name;
-    private int age;
 
-    public Person(String name, int age) {
+    public Employee() {
+    }
+
+    public Employee(String name) {
         this.name = name;
-        this.age = age;
     }
 
     public String getName() {
@@ -21,16 +22,7 @@ public class Person {
         this.name = name;
     }
 
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
     public String toString(){
         return new ReflectionToStringBuilder(this, new RecursiveToStringStyle()).toString();
     }
-
 }
